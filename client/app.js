@@ -8,6 +8,12 @@ angular.module('yoyo', [
     templateUrl: '/home/home.html'
   };
 
+  var other = {
+    url: '/other',
+    templateUrl: '/other/other.html'
+  };
+
   $stateProvider
-    .state('home', home);
+    .state('home', home)
+    .state('other', other);
 });
