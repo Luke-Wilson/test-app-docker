@@ -41,7 +41,17 @@ app.get('/api/glassware', (req, res) => {
   );
 });
 
-
+app.get('/api/random', (req, res) => {
+  request(`http://api.brewerydb.com/v2/beer/random?key=${API_KEY}`,
+    function(error, response) {
+      if (error) {
+        console.log(error);
+        return;
+      }
+      res.send(response);
+    }
+  );
+});
 
 
 
