@@ -4,6 +4,8 @@ angular.module('yoyo.beers', [])
 
   BeersVm.selectedGlassware = "0";
 
+  BeersVm.loading = false;
+
   BeersVm.glassware = [{name: 'Loading glassware...', id: 0}];
 
   Beers.getGlassware()
@@ -14,10 +16,11 @@ angular.module('yoyo.beers', [])
   BeersVm.beerList = [];
 
   BeersVm.getBeers = function(id) {
-    console.log('getting beers with glassware value:', id)
+    BeersVm.loading = true;
     Beers.getBeers(id)
     .then(beers => {
       BeersVm.beerList = beers.data;
+      BeersVm.loading = false;
     });
   };
 
