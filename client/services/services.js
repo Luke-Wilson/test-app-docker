@@ -25,6 +25,21 @@ angular.module('yoyo.services', [])
       .catch(error => {
         console.log(error);
       });
+    },
+
+    getRandomBeer: function() {
+      return $http({
+        method: 'GET',
+        url: '/api/random'
+      })
+      .then(response => {
+        // console.log('this is the response from random')
+        return JSON.parse(response.data.body);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+
     }
   };
 });
