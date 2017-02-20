@@ -1,6 +1,10 @@
-nav {
+.nav {
   display: flex;
-  width: 100vw;
+  width: 90vw;
+  border: 1px solid blue;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .nav-links {
