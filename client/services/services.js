@@ -15,14 +15,11 @@ angular.module('yoyo.services', [])
     },
 
     getGlassware: function() {
-      console.log('getting glassware');
       return $http({
         method: 'GET',
         url: '/api/glassware'
       })
       .then(response => {
-        console.log('GLASSWARE >>>')
-        console.log(JSON.parse(response.data.body))
         return JSON.parse(response.data.body);
       })
       .catch(error => {
