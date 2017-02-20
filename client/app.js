@@ -1,6 +1,7 @@
 angular.module('yoyo', [
   'yoyo.services',
   'yoyo.beers',
+  'yoyo.random',
   'ui.router'
 ])
 .config(function($stateProvider) {
@@ -12,10 +13,10 @@ angular.module('yoyo', [
   };
 
   var other = {
-    url: '/other',
-    templateUrl: '/other/other.html'//,
-    // controller: 'OtherController',
-    // controllerAs: 'OtherVm'
+    url: '/random',
+    templateUrl: '/other/other.html',
+    controller: 'RandomController',
+    controllerAs: 'RandomVm'
   };
 
   var beers = {
@@ -27,6 +28,6 @@ angular.module('yoyo', [
 
   $stateProvider
     .state('home', home)
-    .state('other', other)
+    .state('random', other)
     .state('beers', beers);
 });
