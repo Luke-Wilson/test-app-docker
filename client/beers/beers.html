@@ -1,11 +1,13 @@
 <div>
   <h2>Beers page!</h2>
+
   <span>Select a type of glassware:</span>
 
   <select ng-model="BeersVm.selectedGlassware" ng-change="BeersVm.getBeers(BeersVm.selectedGlassware)">
     <option ng-repeat="x in BeersVm.glassware" ng-value="x.id">{{x.name}}</option>
   </select>
-    <div ng-repeat="beer in BeersVm.beerList">
+  <div ng-show="BeersVm.loading" class="loader"></div>
+    <div ng-hide="BeersVm.loading" ng-repeat="beer in BeersVm.beerList">
       <h4>{{beer.name}}<h4>
       <p style="font-weight: normal;">{{beer.description}}</p>
     </div>
