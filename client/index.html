@@ -8,12 +8,13 @@
 </head>
 <body ng-app="yoyo">
   <h1>Welcome to the index.html</h1>
-  <nav>
-    <a class="nav-links" ui-sref="home">home</a>
-    <a class="nav-links" ui-sref="other">other</a>
-    <a class="nav-links" ui-sref="beers">BEERS!</a>
+  <nav class="nav">
+    <a class="nav-links" ui-sref="home"><img class="nav-links" src="./assets/beer-glasses.jpg"></a>
+    <a class="nav-links" ui-sref="random">IDK... Whatever you're having mate.</a>
+    <a class="nav-links" ui-sref="beers">Ooh, look at fancy pants with his fancy glass</a>
   </nav>
   <div ui-view></div>
+  <script src="./other/other.js"></script>
   <script src="./beers/beers.js"></script>
   <script src="./services/services.js"></script>
   <script src="./app.js"></script>
