@@ -1,15 +1,17 @@
 <div>
-
-  <h4 ng-hide="RandomVm.randomBeer.id">Don't know what beer to order?</h4>
-  <button ng-click="RandomVm.getRandomBeer()">get a random beer</button>
-
-  <div ng-show="RandomVm.randomBeer.id">
-    <h4>'Ave a go of this one!</h4>
-    <ul>
-      <li style="font-weight: bold;">{{RandomVm.randomBeer.name}}</li>
-      <li ng-show="RandomVm.randomBeer.abv">Alcohol content: {{RandomVm.randomBeer.abv}}%</li>
-      <li>Will your mate who only drinks organic shit like it? {{RandomVm.randomBeer.isOrganic}}</li>
-      <li ng-show="RandomVm.randomBeer.description">Description: {{RandomVm.randomBeer.description}}</li>
-    </ul>
+  <div class="page-head">
+    <h4 ng-hide="RandomVm.randomBeer.id">Don't know what beer to order?</h4>
+    <button ng-click="RandomVm.getRandomBeer()">get a random beer</button>
+  </div>
+  <div class="page-body">
+    <div class="beer-list" ng-show="RandomVm.randomBeer.id">
+      <h4>'Ave a go of this one!</h4>
+      <ul>
+        <li style="font-weight: bold;">{{RandomVm.randomBeer.name}}</li>
+        <li ng-show="RandomVm.randomBeer.abv">Alcohol content: {{RandomVm.randomBeer.abv}}%</li>
+        <li>Will your mate who only drinks organic shit like it? {{RandomVm.randomBeer.isOrganic}}</li>
+        <li ng-show="RandomVm.randomBeer.description">Description: {{RandomVm.randomBeer.description}}</li>
+      </ul>
+    </div>
   </div>
 </div>
