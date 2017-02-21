@@ -1,19 +1,40 @@
 .nav {
   display: flex;
   width: 90vw;
-  border: 1px solid blue;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .nav-links {
   text-decoration: none;
+  font-size: 20px;
   padding: 10px;
 }
 
+.nav-links:visited {
+  color: black;
+}
+
 .nav-links:hover {
-  color: grey;
+  color: green;
+}
+
+.page-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.beer-list {
+  flex-basis: 400px;
+  max-width: 70vw;
 }
 
 .loader {
